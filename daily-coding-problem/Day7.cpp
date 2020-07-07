@@ -15,10 +15,10 @@ int countDecodingChar(char *digits, int n)
     int count = 0;  
   
     if (digits[n-1] > '0') 
-        count =  countDecoding(digits, n-1); 
+        count =  countDecodingChar(digits, n-1); 
     if (digits[n-2] == '1' ||  
                   (digits[n-2] == '2' && digits[n-1] < '7') ) 
-        count +=  countDecoding(digits, n-2); 
+        count +=  countDecodingChar(digits, n-2); 
   
     return count; 
 } 
